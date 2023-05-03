@@ -1,3 +1,4 @@
+#Extract the details of the file using ls -l
 clear
 echo "Enter File name:"
 read f
@@ -12,16 +13,16 @@ list1=`ls -l | grep -w "$f" | cut -d " " -f 1`
 echo "File permission of $f are:$list1"
 
 list2=`ls -l | grep -w "$f" | cut -d " " -f 2`
-echo "Hard links of $f is:$list2"
+echo "File links of $f is:$list2"
 
 list3=`ls -l | grep -w "$f" | cut -d " " -f 3`
-echo "User of $f is:$list3"
+echo "Username of $f is:$list3"
 
 list4=`ls -l | grep -w "$f" | cut -d " " -f 4`
-echo "Group of $f is:$list4"
+echo "Group Name of $f is:$list4"
 
 list5=`ls -l | tr -s " " " " | grep -w "$f" | cut -d " " -f 5`
-echo "Size of $f is:$list5 bytes"
+echo "File Size of $f is:$list5 bytes"
 
 list6=`ls -l | tr -s " " " " | grep -w "$f" | cut -d " " -f 6`
 echo "Date of $f:$list6"
